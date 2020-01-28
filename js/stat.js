@@ -6,10 +6,10 @@ var CLOUD_HEIGHT = 270;
 var CLOUD_WIDTH = 420;
 var CLOUD_COLOR = '#fff';
 var CLOUD_MESSAGE = 'Ура вы победили!';
-var CLOUD_MESSAGE_COORD_X = 110
+var CLOUD_MESSAGE_COORD_X = 110;
 var CLOUD_MESSAGE_COORD_Y = 30;
 var ELEMENT_SPACING = 10;
-var SHADOW_COORD_X = 110
+var SHADOW_COORD_X = 110;
 var SHADOW_COORD_Y = 20;
 var SHADOW_COLOR = 'rgba(0, 0, 0, 0.7)';
 var CHART_TITLE = 'Список результатов:';
@@ -40,7 +40,6 @@ var drawText = function (ctx, text, x, y) {
 var drawChart = function (ctx, names, times) {
   var maxTime = getMaxElement(times);
   var sectionCoordX = CLOUD_MESSAGE_COORD_X;
-
 
   for (var i = 0; i < names.length; i++) {
     var barHeight = Math.round((times[i] / maxTime) * CHART_HEIGHT);
@@ -79,10 +78,7 @@ var getMaxElement = function (elements) {
 };
 
 var getRandomIntInclusive = function (min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.round(Math.random() * (max - min + 1)) + min;
 };
 
 window.renderStatistics = function (ctx, names, times) {
