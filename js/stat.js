@@ -57,12 +57,13 @@ var drawChart = function (ctx, names, times) {
 };
 
 var getRandomBlueHslColor = function () {
-  var minSaturation = 10;
-  var minLightness = 10;
-  var maxSaturation = 100;
-  var maxLightness = 100;
-  var saturation = getRandomIntInclusive(minSaturation, maxSaturation);
-  var lightness = getRandomIntInclusive(minLightness, maxLightness);
+  var MIN_SATURATION = 10;
+  var MIN_LIGHTNESS = 10;
+  var MAX_SATURATION = 100;
+  var MAX_LIGHTNESS = 100;
+
+  var saturation = getRandomIntInclusive(MIN_SATURATION, MAX_SATURATION);
+  var lightness = getRandomIntInclusive(MIN_LIGHTNESS, MAX_LIGHTNESS);
 
   return 'hsl(230, ' + saturation + '%, ' + lightness + '%)';
 };
